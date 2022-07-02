@@ -8,7 +8,7 @@ add  e_salary varchar(20)
 insert into employee values(1,'Rupali',22,'Female','Nurse','Pune',35000);
 insert into employee values(2,'Babana',29,'male','Tester','Pune',65000);
 insert into employee values(3,'Shubham',27,'male','Developer','Mumbai',60000);
-insert into employee values(4,'Nanasaheb',32,'male','Tester','Pune',59000);
+insert into employee values(4,'Anuj',32,'male','Tester','Pune',59000);
 insert into employee values(5,'Rahul',28,'male','Developer','Pune',70000);
 insert into employee values(6,'Sonali',25,'Female','Hr','Mumbai',40000);
 insert into employee values(7,'Avinash',26,'male','Underwriter','Pune',55000);
