@@ -1,0 +1,692 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Symbol;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Segoe UI Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Skip to content\par
+TechBeamers\par
+Tutorials \par
+Python Tutorial\par
+Python Examples\par
+Selenium Tutorial\par
+Software Testing Tutorial\par
+Java Programming\par
+C Programming\par
+Linux Tutorial\par
+MySQL Tutorial\par
+Agile Tutorial\par
+AngularJS Tutorial\par
+Android Tutorial\par
+Interview Questions \par
+SQL Interview Questions\par
+Testing Interview Questions\par
+Python Interview Questions\par
+Selenium Interview Questions\par
+C Sharp Interview Questions\par
+PHP Interview Questions\par
+Web Development Questions\par
+Java Interview Questions\par
+Programming Quizzes \par
+Python Quiz\par
+Selenium Quiz\par
+Java Quiz\par
+HTML CSS Quiz\par
+Shell Scripting Quiz\par
+C/C++ Quiz\par
+Search for: \par
+Search\par
+50 SQL Query Questions and Answers for Practice\par
+\par
+ \par
+SQL Interview\par
+Meenakshi Agarwal\par
+\par
+ \par
+If you want to improve SQL skills, then install a SQL package like MySQL and start practicing with it. To get you started, we\rquote ve outlined a few SQL query questions in this post.\par
+\par
+Solving practice questions is the fastest way to learn any subject. That\rquote s why we\rquote ve selected a set of 50 SQL queries that you can use to step up your learning. We\rquote ve also given SQL scripts to create the test data. So, you can use them to create a test database and tables.\par
+\par
+Most of the SQL query questions we\rquote ve filtered out of interviews held by top IT MNC like Flipkart and Amazon. So you\rquote ll gain real-time experience by going through them.\par
+\par
+Also, we recommend that you first try to form queries by yourself rather than just reading them from the post. Try to find answers on your own.\par
+\par
+But you can\rquote t start until the required sample data is not in place. You can check out the tables below that we\rquote ve provided for practice. So first of all, you need to create the test data in your database software.\par
+\par
+By the way, we have a bunch of other posts available for SQL interview preparation. So if you are interested, then follow the link given below.\par
+\par
+\par
+\f1\u-10179?\u-9055?\f0  Most Frequently Asked SQL Interview Questions.\par
+\par
+Let\rquote s Begin Learning SQL.\par
+50 SQL Query Questions\par
+50 SQL Query Questions\par
+Prepare Sample Data To Practice SQL Skill.\par
+Sample Table \f2\endash  Worker\par
+WORKER_ID\tab FIRST_NAME\tab LAST_NAME\tab SALARY\tab JOINING_DATE\tab DEPARTMENT\par
+001\tab Monika\tab Arora\tab 100000\tab 2014-02-20 09:00:00\tab HR\par
+002\tab Niharika\tab Verma\tab 80000\tab 2014-06-11 09:00:00\tab Admin\par
+003\tab Vishal\tab Singhal\tab 300000\tab 2014-02-20 09:00:00\tab HR\par
+004\tab Amitabh\tab Singh\tab 500000\tab 2014-02-20 09:00:00\tab Admin\par
+005\tab Vivek\tab Bhati\tab 500000\tab 2014-06-11 09:00:00\tab Admin\par
+006\tab Vipul\tab Diwan\tab 200000\tab 2014-06-11 09:00:00\tab Account\par
+007\tab Satish\tab Kumar\tab 75000\tab 2014-01-20 09:00:00\tab Account\par
+008\tab Geetika\tab Chauhan\tab 90000\tab 2014-04-11 09:00:00\tab Admin\par
+Sample Table \endash  Bonus\par
+WORKER_REF_ID\tab BONUS_DATE\tab BONUS_AMOUNT\par
+1\tab 2016-02-20 00:00:00\tab 5000\par
+2\tab 2016-06-11 00:00:00\tab 3000\par
+3\tab 2016-02-20 00:00:00\tab 4000\par
+1\tab 2016-02-20 00:00:00\tab 4500\par
+2\tab 2016-06-11 00:00:00\tab 3500\par
+Sample Table \endash  Title\par
+WORKER_REF_ID\tab WORKER_TITLE\tab AFFECTED_FROM\par
+1\tab Manager\tab 2016-02-20 00:00:00\par
+2\tab Executive\tab 2016-06-11 00:00:00\par
+8\tab Executive\tab 2016-06-11 00:00:00\par
+5\tab Manager\tab 2016-06-11 00:00:00\par
+4\tab Asst. Manager\tab 2016-06-11 00:00:00\par
+7\tab Executive\tab 2016-06-11 00:00:00\par
+6\tab Lead\tab 2016-06-11 00:00:00\par
+3\tab Lead\tab 2016-06-11 00:00:00\par
+To prepare the sample data, you can run the following queries in your database query executor or on the SQL command line. We\rquote ve tested them with MySQL Server 5.7 and MySQL Workbench 6.3.8 query browser. You can also download these Softwares and install them to carry on the SQL exercise.\par
+\par
+SQL Script to Seed Sample Data.\par
+CREATE DATABASE ORG;\par
+SHOW DATABASES;\par
+USE ORG;\par
+\par
+CREATE TABLE Worker (\par
+\tab WORKER_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,\par
+\tab FIRST_NAME CHAR(25),\par
+\tab LAST_NAME CHAR(25),\par
+\tab SALARY INT(15),\par
+\tab JOINING_DATE DATETIME,\par
+\tab DEPARTMENT CHAR(25)\par
+);\par
+\par
+INSERT INTO Worker \par
+\tab (WORKER_ID, FIRST_NAME, LAST_NAME, SALARY, JOINING_DATE, DEPARTMENT) VALUES\par
+\tab\tab (001, 'Monika', 'Arora', 100000, '14-02-20 09.00.00', 'HR'),\par
+\tab\tab (002, 'Niharika', 'Verma', 80000, '14-06-11 09.00.00', 'Admin'),\par
+\tab\tab (003, 'Vishal', 'Singhal', 300000, '14-02-20 09.00.00', 'HR'),\par
+\tab\tab (004, 'Amitabh', 'Singh', 500000, '14-02-20 09.00.00', 'Admin'),\par
+\tab\tab (005, 'Vivek', 'Bhati', 500000, '14-06-11 09.00.00', 'Admin'),\par
+\tab\tab (006, 'Vipul', 'Diwan', 200000, '14-06-11 09.00.00', 'Account'),\par
+\tab\tab (007, 'Satish', 'Kumar', 75000, '14-01-20 09.00.00', 'Account'),\par
+\tab\tab (008, 'Geetika', 'Chauhan', 90000, '14-04-11 09.00.00', 'Admin');\par
+\par
+CREATE TABLE Bonus (\par
+\tab WORKER_REF_ID INT,\par
+\tab BONUS_AMOUNT INT(10),\par
+\tab BONUS_DATE DATETIME,\par
+\tab FOREIGN KEY (WORKER_REF_ID)\par
+\tab\tab REFERENCES Worker(WORKER_ID)\par
+        ON DELETE CASCADE\par
+);\par
+\par
+INSERT INTO Bonus \par
+\tab (WORKER_REF_ID, BONUS_AMOUNT, BONUS_DATE) VALUES\par
+\tab\tab (001, 5000, '16-02-20'),\par
+\tab\tab (002, 3000, '16-06-11'),\par
+\tab\tab (003, 4000, '16-02-20'),\par
+\tab\tab (001, 4500, '16-02-20'),\par
+\tab\tab (002, 3500, '16-06-11');\par
+CREATE TABLE Title (\par
+\tab WORKER_REF_ID INT,\par
+\tab WORKER_TITLE CHAR(25),\par
+\tab AFFECTED_FROM DATETIME,\par
+\tab FOREIGN KEY (WORKER_REF_ID)\par
+\tab\tab REFERENCES Worker(WORKER_ID)\par
+        ON DELETE CASCADE\par
+);\par
+\par
+INSERT INTO Title \par
+\tab (WORKER_REF_ID, WORKER_TITLE, AFFECTED_FROM) VALUES\par
+ (001, 'Manager', '2016-02-20 00:00:00'),\par
+ (002, 'Executive', '2016-06-11 00:00:00'),\par
+ (008, 'Executive', '2016-06-11 00:00:00'),\par
+ (005, 'Manager', '2016-06-11 00:00:00'),\par
+ (004, 'Asst. Manager', '2016-06-11 00:00:00'),\par
+ (007, 'Executive', '2016-06-11 00:00:00'),\par
+ (006, 'Lead', '2016-06-11 00:00:00'),\par
+ (003, 'Lead', '2016-06-11 00:00:00');\par
+Once above SQL would run, you\rquote ll see a result similar to the one attached below.\par
+\par
+SQL Query Questions - Creating Sample Data\par
+Creating Sample Data to Practice SQL Skill.\par
+50 SQL Query Questions and Answers for Practice.\par
+Q-1. Write an SQL query to fetch \ldblquote FIRST_NAME\rdblquote  from Worker table using the alias name as <WORKER_NAME>.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select FIRST_NAME AS WORKER_NAME from Worker;\par
+ \par
+\par
+Q-2. Write an SQL query to fetch \ldblquote FIRST_NAME\rdblquote  from Worker table in upper case.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select upper(FIRST_NAME) from Worker;\par
+ \par
+\par
+Q-3. Write an SQL query to fetch unique values of DEPARTMENT from Worker table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select distinct DEPARTMENT from Worker;\par
+ \par
+\par
+Q-4. Write an SQL query to print the first three characters of  FIRST_NAME from Worker table.\par
+Ans.\par
+\par
+\par
+ \par
+The required query is:\par
+\par
+Select substring(FIRST_NAME,1,3) from Worker;\par
+ \par
+\par
+Q-5. Write an SQL query to find the position of the alphabet (\lquote a\rquote ) in the first name column \lquote Amitabh\rquote  from Worker table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select INSTR(FIRST_NAME, BINARY'a') from Worker where FIRST_NAME = 'Amitabh';\par
+Notes.\par
+\par
+The INSTR method is in case-sensitive by default.\par
+Using Binary operator will make INSTR work as the case-sensitive function.\par
+ \par
+\par
+Q-6. Write an SQL query to print the FIRST_NAME from Worker table after removing white spaces from the right side.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select RTRIM(FIRST_NAME) from Worker;\par
+ \par
+\par
+Q-7. Write an SQL query to print the DEPARTMENT from Worker table after removing white spaces from the left side.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select LTRIM(DEPARTMENT) from Worker;\par
+ \par
+\par
+Q-8. Write an SQL query that fetches the unique values of DEPARTMENT from Worker table and prints its length.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select distinct length(DEPARTMENT) from Worker;\par
+ \par
+\par
+Q-9. Write an SQL query to print the FIRST_NAME from Worker table after replacing \lquote a\rquote  with \lquote A\rquote .\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select REPLACE(FIRST_NAME,'a','A') from Worker;\par
+ \par
+\par
+Q-10. Write an SQL query to print the FIRST_NAME and LAST_NAME from Worker table into a single column COMPLETE_NAME. A space char should separate them.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'COMPLETE_NAME' from Worker;\par
+ \par
+\par
+Q-11. Write an SQL query to print all Worker details from the Worker table order by FIRST_NAME Ascending.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker order by FIRST_NAME asc;\par
+ \par
+\par
+Q-12. Write an SQL query to print all Worker details from the Worker table order by FIRST_NAME Ascending and DEPARTMENT Descending.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker order by FIRST_NAME asc,DEPARTMENT desc;\par
+ \par
+\par
+Q-13. Write an SQL query to print details for Workers with the first name as \ldblquote Vipul\rdblquote  and \ldblquote Satish\rdblquote  from Worker table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where FIRST_NAME in ('Vipul','Satish');\par
+ \par
+\par
+Q-14. Write an SQL query to print details of workers excluding first names, \ldblquote Vipul\rdblquote  and \ldblquote Satish\rdblquote  from Worker table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where FIRST_NAME not in ('Vipul','Satish');\par
+ \par
+\par
+Q-15. Write an SQL query to print details of Workers with DEPARTMENT name as \ldblquote Admin\rdblquote .\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where DEPARTMENT like 'Admin%';\par
+ \par
+\par
+Q-16. Write an SQL query to print details of the Workers whose FIRST_NAME contains \lquote a\rquote .\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where FIRST_NAME like '%a%';\par
+ \par
+\par
+Q-17. Write an SQL query to print details of the Workers whose FIRST_NAME ends with \lquote a\rquote .\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where FIRST_NAME like '%a';\par
+ \par
+\par
+Q-18. Write an SQL query to print details of the Workers whose FIRST_NAME ends with \lquote h\rquote  and contains six alphabets.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where FIRST_NAME like '_____h';\par
+ \par
+\par
+Q-19. Write an SQL query to print details of the Workers whose SALARY lies between 100000 and 500000.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where SALARY between 100000 and 500000;\par
+ \par
+\par
+Q-20. Write an SQL query to print details of the Workers who have joined in Feb\rquote 2014.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where year(JOINING_DATE) = 2014 and month(JOINING_DATE) = 2;\par
+ \par
+\par
+Q-21. Write an SQL query to fetch the count of employees working in the department \lquote Admin\rquote .\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT COUNT(*) FROM worker WHERE DEPARTMENT = 'Admin';\par
+ \par
+\par
+Q-22. Write an SQL query to fetch worker names with salaries >= 50000 and <= 100000.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) As Worker_Name, Salary\par
+FROM worker \par
+WHERE WORKER_ID IN \par
+(SELECT WORKER_ID FROM worker \par
+WHERE Salary BETWEEN 50000 AND 100000);\par
+Q-23. Write an SQL query to fetch the no. of workers for each department in the descending order.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT DEPARTMENT, count(WORKER_ID) No_Of_Workers \par
+FROM worker \par
+GROUP BY DEPARTMENT \par
+ORDER BY No_Of_Workers DESC;\par
+Q-24. Write an SQL query to print details of the Workers who are also Managers.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT DISTINCT W.FIRST_NAME, T.WORKER_TITLE\par
+FROM Worker W\par
+INNER JOIN Title T\par
+ON W.WORKER_ID = T.WORKER_REF_ID\par
+AND T.WORKER_TITLE in ('Manager');\par
+ \par
+\par
+Q-25. Write an SQL query to fetch duplicate records having matching data in some fields of a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT WORKER_TITLE, AFFECTED_FROM, COUNT(*)\par
+FROM Title\par
+GROUP BY WORKER_TITLE, AFFECTED_FROM\par
+HAVING COUNT(*) > 1;\par
+Q-26. Write an SQL query to show only odd rows from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT * FROM Worker WHERE MOD (WORKER_ID, 2) <> 0;\par
+ \par
+\par
+Q-27. Write an SQL query to show only even rows from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT * FROM Worker WHERE MOD (WORKER_ID, 2) = 0;\par
+Q-28. Write an SQL query to clone a new table from another table.\par
+Ans.\par
+\par
+The general query to clone a table with data is:\par
+\par
+SELECT * INTO WorkerClone FROM Worker;\par
+The general way to clone a table without information is:\par
+\par
+SELECT * INTO WorkerClone FROM Worker WHERE 1 = 0;\par
+An alternate way to clone a table (for MySQL) without is:\par
+\par
+CREATE TABLE WorkerClone LIKE Worker;\par
+ \par
+\par
+Q-29. Write an SQL query to fetch intersecting records of two tables.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+(SELECT * FROM Worker)\par
+INTERSECT\par
+(SELECT * FROM WorkerClone);\par
+ \par
+\par
+Q-30. Write an SQL query to show records from one table that another table does not have.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT * FROM Worker\par
+MINUS\par
+SELECT * FROM Title;\par
+ \par
+\par
+Q-31. Write an SQL query to show the current date and time.\par
+Ans.\par
+\par
+Following MySQL query returns the current date:\par
+\par
+SELECT CURDATE();\par
+Following MySQL query returns the current date and time:\par
+\par
+SELECT NOW();\par
+Following SQL Server query returns the current date and time:\par
+\par
+SELECT getdate();\par
+Following Oracle query returns the current date and time:\par
+\par
+SELECT SYSDATE FROM DUAL;\par
+ \par
+\par
+Q-32. Write an SQL query to show the top n (say 10) records of a table.\par
+Ans.\par
+\par
+Following MySQL query will return the top n records using the LIMIT method:\par
+\par
+SELECT * FROM Worker ORDER BY Salary DESC LIMIT 10;\par
+Following SQL Server query will return the top n records using the TOP command:\par
+\par
+SELECT TOP 10 * FROM Worker ORDER BY Salary DESC;\par
+Following Oracle query will return the top n records with the help of ROWNUM:\par
+\par
+SELECT * FROM (SELECT * FROM Worker ORDER BY Salary DESC)\par
+WHERE ROWNUM <= 10;\par
+ \par
+\par
+Q-33. Write an SQL query to determine the nth (say n=5) highest salary from a table.\par
+Ans.\par
+\par
+The following MySQL query returns the nth highest salary:\par
+\par
+SELECT Salary FROM Worker ORDER BY Salary DESC LIMIT n-1,1;\par
+The following SQL Server query returns the nth highest salary:\par
+\par
+SELECT TOP 1 Salary\par
+FROM (\par
+ SELECT DISTINCT TOP n Salary\par
+ FROM Worker \par
+ ORDER BY Salary DESC\par
+ )\par
+ORDER BY Salary ASC;\par
+ \par
+\par
+Q-34. Write an SQL query to determine the 5th highest salary without using TOP or limit method.\par
+Ans.\par
+\par
+The following query is using the correlated subquery to return the 5th highest salary:\par
+\par
+SELECT Salary\par
+FROM Worker W1\par
+WHERE 4 = (\par
+ SELECT COUNT( DISTINCT ( W2.Salary ) )\par
+ FROM Worker W2\par
+ WHERE W2.Salary >= W1.Salary\par
+ );\par
+Use the following generic method to find nth highest salary without using TOP or limit.\par
+\par
+SELECT Salary\par
+FROM Worker W1\par
+WHERE n-1 = (\par
+ SELECT COUNT( DISTINCT ( W2.Salary ) )\par
+ FROM Worker W2\par
+ WHERE W2.Salary >= W1.Salary\par
+ );\par
+ \par
+\par
+Q-35. Write an SQL query to fetch the list of employees with the same salary.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select distinct W.WORKER_ID, W.FIRST_NAME, W.Salary \par
+from Worker W, Worker W1 \par
+where W.Salary = W1.Salary \par
+and W.WORKER_ID != W1.WORKER_ID;\par
+ \par
+\par
+Q-36. Write an SQL query to show the second highest salary from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select max(Salary) from Worker \par
+where Salary not in (Select max(Salary) from Worker);\par
+ \par
+\par
+Q-37. Write an SQL query to show one row twice in results from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+select FIRST_NAME, DEPARTMENT from worker W where W.DEPARTMENT='HR' \par
+union all \par
+select FIRST_NAME, DEPARTMENT from Worker W1 where W1.DEPARTMENT='HR';\par
+ \par
+\par
+Q-38. Write an SQL query to fetch intersecting records of two tables.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+(SELECT * FROM Worker)\par
+INTERSECT\par
+(SELECT * FROM WorkerClone);\par
+ \par
+\par
+Q-39. Write an SQL query to fetch the first 50% records from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT *\par
+FROM WORKER\par
+WHERE WORKER_ID <= (SELECT count(WORKER_ID)/2 from Worker);\par
+ \par
+\par
+Q-40. Write an SQL query to fetch the departments that have less than five people in it.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT DEPARTMENT, COUNT(WORKER_ID) as 'Number of Workers' FROM Worker GROUP BY DEPARTMENT HAVING COUNT(WORKER_ID) < 5;\par
+ \par
+\par
+Q-41. Write an SQL query to show all departments along with the number of people in there.\par
+Ans.\par
+\par
+The following query returns the expected result:\par
+\par
+SELECT DEPARTMENT, COUNT(DEPARTMENT) as 'Number of Workers' FROM Worker GROUP BY DEPARTMENT;\par
+ \par
+\par
+Q-42. Write an SQL query to show the last record from a table.\par
+Ans.\par
+\par
+The following query will return the last record from the Worker table:\par
+\par
+Select * from Worker where WORKER_ID = (SELECT max(WORKER_ID) from Worker);\par
+ \par
+\par
+Q-43. Write an SQL query to fetch the first row of a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+Select * from Worker where WORKER_ID = (SELECT min(WORKER_ID) from Worker);\par
+ \par
+\par
+Q-44. Write an SQL query to fetch the last five records from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT * FROM Worker WHERE WORKER_ID <=5\par
+UNION\par
+SELECT * FROM (SELECT * FROM Worker W order by W.WORKER_ID DESC) AS W1 WHERE W1.WORKER_ID <=5;\par
+ \par
+\par
+Q-45. Write an SQL query to print the name of employees having the highest salary in each department.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT t.DEPARTMENT,t.FIRST_NAME,t.Salary from(SELECT max(Salary) as TotalSalary,DEPARTMENT from Worker group by DEPARTMENT) as TempNew \par
+Inner Join Worker t on TempNew.DEPARTMENT=t.DEPARTMENT \par
+ and TempNew.TotalSalary=t.Salary;\par
+ \par
+\par
+Q-46. Write an SQL query to fetch three max salaries from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT distinct Salary from worker a WHERE 3 >= (SELECT count(distinct Salary) from worker b WHERE a.Salary <= b.Salary) order by a.Salary desc;\par
+ \par
+\par
+Q-47. Write an SQL query to fetch three min salaries from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT distinct Salary from worker a WHERE 3 >= (SELECT count(distinct Salary) from worker b WHERE a.Salary >= b.Salary) order by a.Salary desc;\par
+ \par
+\par
+Q-48. Write an SQL query to fetch nth max salaries from a table.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT distinct Salary from worker a WHERE n >= (SELECT count(distinct Salary) from worker b WHERE a.Salary <= b.Salary) order by a.Salary desc;\par
+ \par
+\par
+Q-49. Write an SQL query to fetch departments along with the total salaries paid for each of them.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+ SELECT DEPARTMENT, sum(Salary) from worker group by DEPARTMENT;\par
+ \par
+\par
+Q-50. Write an SQL query to fetch the names of workers who earn the highest salary.\par
+Ans.\par
+\par
+The required query is:\par
+\par
+SELECT FIRST_NAME, SALARY from Worker WHERE SALARY=(SELECT max(SALARY) from Worker);\par
+ \par
+\par
+Summary \endash  50 SQL Query Questions and Answers for Practice.\par
+Let us take a pause here. But we\rquote ll come back with more challenging questions on SQL queries in our next post.\par
+\par
+Hope, you\rquote d fun learning through the SQL exercises.\par
+\par
+If you find something new to learn today, then do share it with others. And, follow us on our social media (Facebook/Twitter) accounts to see more of this.\par
+\par
+Best,\par
+\par
+TechBeamers\par
+\par
+ \par
+Read more articles\par
+Previous PostTop 30 PL SQL Interview Questions and Answers for Freshers\par
+Next Post25 SQL Performance Interview Questions and Answers\par
+You Might Also Like\par
+SQL Exercises \endash  Complex Queries\par
+SQL Exercises \endash  Complex Queries\par
+May 10, 2020\par
+Top SQL Interview Questions One Should Know Beforehand\par
+Top SQL Interview Questions One Should Know Beforehand\par
+September 23, 2016\par
+25 SQL Performance Interview Questions and Answers\par
+25 SQL Performance Interview Questions and Answers\par
+December 10, 2016\par
+ \par
+\par
+\par
+ \par
+Tutorials\par
+Python Tutorial for Beginners\par
+Selenium Python Tutorial\par
+Selenium Webdriver Tutorial\par
+Selenium Demo Websites\par
+Python Multithreading Tutorial\par
+Java Multithreading Tutorial\par
+Python Tips & Tricks\par
+Interviews Questions\par
+Python Interview Questions\par
+SQL Query Interview Questions\par
+Selenium Interview Questions\par
+QA Interview Questions\par
+Manual Testing Questions\par
+Rest API Interview Questions\par
+Linux Interview Questions\par
+Web Development\par
+AngularJS Interview Questions\par
+JavaScript Interview Questions\par
+Web Developer Interview Questions\par
+NodeJS Interview Questions\par
+HTML/HTML5 Interview Questions\par
+PHP Interview Questions-1\par
+PHP Interview Questions-2\par
+TechBeamers\par
+About Us\par
+Legal\par
+Disclaimer\par
+Privacy Policy\par
+\f0\'a9 Copyright 2015 - 2021 | TechBeamers\par
+\f3\u9650?\f0\{"mode":"full","isActive":false\}\par
+}
+ 
