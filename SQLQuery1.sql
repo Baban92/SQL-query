@@ -23,4 +23,3 @@ exec e_emp
 insert into e_emp values (8,'XYZ',50,'Female','ABC','PQR',100000)
 select * from employee
   
-hi
