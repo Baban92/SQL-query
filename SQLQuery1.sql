@@ -1,4 +1,4 @@
-//To create new Empoyee table//
+//To create new Empoyee table and Vew//
 create database Rugved
 use Rugved
 alter table employee(e_id int default (1,1) ,e_name varchar(20),e_age int,e_gender varchar(20),e_dept varchar(20),e_location varchar(20))
